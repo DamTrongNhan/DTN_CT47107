@@ -1,0 +1,54 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 30px 0;
+  max-width: 1200px;
+
+  .title {
+    font-size: 26px;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 0.2px solid var(--gray);
+  }
+}
+.detail {
+  width: 100%;
+}
+.product {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  img {
+    width: 300px;
+    border: 1px solid var(--yellow);
+    border-radius: 20px;
+  }
+  .product-detail {
+    .product-name {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+.credit {
+  margin-top: 20px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  border: 1px solid var(--yellow);
+  border-radius: 20px;
+  font-size: 20px;
+  p {
+    align-items: center;
+    height: 35px;
+  }
+  .village-name {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}

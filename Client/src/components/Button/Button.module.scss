@@ -1,0 +1,70 @@
+.wrapper {
+  margin: 0 5px;
+  padding: 8px 14px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--dark);
+  background-color: var(--white);
+  user-select: none;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 30%);
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(130%);
+  }
+}
+
+// button types
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.secondary {
+  background-color: #cbbf99;
+  color: var(--dark);
+}
+.white {
+  background-color: var(--white);
+  color: var(--dark);
+}
+.shadeYellow {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+.yellow {
+  background-color: var(--yellow02);
+  color: var(--dark);
+}
+.red {
+  background-color: var(--red);
+  color: var(--white);
+}
+.green {
+  background-color: var(--success);
+  color: var(--white);
+}
+
+// borders
+.round {
+  border-radius: 8px;
+}
+
+.circle {
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 46.1875em) {
+  .wrapper {
+    font-size: 1.2rem;
+  }
+}

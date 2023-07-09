@@ -1,0 +1,114 @@
+.wrapper {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 5%;
+  margin-bottom: 20px;
+  button {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  form {
+    margin-top: 40px;
+    margin-right: 150px;
+    border: 2px solid yellow;
+    border-radius: 50px;
+    padding: 40px;
+    label {
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      p,
+      input[type='text'],
+      textarea {
+        margin-left: 40px;
+        width: 75%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      p,
+      h6 {
+        margin-bottom: 0;
+      }
+      p {
+        padding: 10px 10px 10px 20px;
+        border-radius: 50px;
+        border: 1px solid yellow;
+      }
+      h6 {
+        margin-top: 5px;
+        width: 25%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      input[type='text'],
+      textarea {
+        padding: 0 10px;
+        border: 0.2px solid var(--gray);
+        &:focus {
+          border-color: red;
+        }
+      }
+      input[type='text'] {
+        height: 35px;
+        border-radius: 50px;
+      }
+      textarea {
+        min-height: 80px;
+        border-radius: 10px;
+      }
+      .input-error {
+        border-color: var(--red);
+      }
+    }
+    .fileUpload {
+      padding: 10px 10px 10px 20px;
+      border-radius: 50px;
+      border: 2px dashed yellow;
+      cursor: pointer;
+      color: blue;
+    }
+    .fileUploadImage {
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px dashed yellow;
+      cursor: pointer;
+    }
+    .fileUploadedImage {
+      padding: 20px;
+      border-radius: 50px;
+      border: 2px dashed blue;
+    }
+    .qrImage {
+      margin-left: 40px;
+    }
+    .form-btn {
+      margin: 10px calc(20% + 30px);
+      width: 100%;
+      height: 40px;
+      button {
+        width: 200px;
+        height: 40px;
+        border-radius: 14px;
+      }
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.mess-error {
+  width: 100%;
+  margin: -10px calc(20% + 30px) 10px;
+  color: var(--red);
+  font-size: 16px;
+}

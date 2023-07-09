@@ -1,0 +1,243 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--default-layout-header-height);
+  background-color: var(--yellow);
+  box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+}
+
+.inner {
+  max-width: 1980px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px 5%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.left-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.center-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.right-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .right-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo,
+.logo:hover {
+  margin: 0 5px;
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.navlink {
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: clamp(12px, 18px, 24px);
+  text-decoration: none;
+  // color: var(--dark);
+  color: black;
+  transition: all linear 0.2s;
+  &:hover {
+    color: black;
+    background-color: var(--yellow02);
+    border-radius: 50px;
+    height: 72%;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 30%);
+  }
+  &.active {
+    color: black;
+    background-color: var(--yellow02);
+    border-radius: 50px;
+    height: 72%;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 30%);
+  }
+}
+
+.navbars-btn,
+.nav-mobile-close {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 18px;
+  align-items: center !important;
+  justify-content: center;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  svg {
+    height: 25px;
+  }
+}
+.navbars-btn {
+  left: 20px;
+  display: none !important;
+}
+.nav-mobile-close {
+  right: 10px;
+  display: flex;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 320px;
+  max-width: 100%;
+  background-color: var(--yellow);
+  transform: translateX(-100%);
+  transition: opacity linear 0.2s, transform linear 0.2s;
+}
+.nav-mobile.active {
+  transform: translateX(0%) !important;
+}
+
+.navlink-mobile {
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--dark);
+  background-color: var(--yellow02);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 30%);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--dark);
+  }
+
+  &.active {
+    color: var(--white);
+    background-color: black;
+  }
+}
+
+.search-mobile {
+  margin: 10px 0;
+  display: none;
+  justify-content: center;
+}
+
+.auth-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  right: 25px;
+  display: none;
+  justify-content: space-around;
+  button {
+    width: 125px;
+  }
+}
+// mobile and table
+@media screen and (max-width: 64em) {
+}
+
+// mobile: width <740px
+@media screen and (max-width: 46.1875em) {
+  .inner {
+    padding: 0 30px;
+  }
+  .right-header {
+    display: none;
+  }
+  .search-mobile,
+  .auth-btn {
+    display: flex;
+  }
+}
+
+// tablet - pc low resolution: 740px <= width < 1024px
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .inner {
+    padding: 0 clamp(40px, 50px, 60px);
+  }
+}
+// pc low resolution: width < 1240px
+@media screen and (max-width: 77.4375em) {
+  .left-header {
+    justify-content: center;
+  }
+  .center-header {
+    display: none;
+  }
+  .navbars-btn {
+    display: block !important;
+  }
+}
+
+// pc: width >= 1024px and width < 1680px
+@media screen and (min-width: 64em) and (max-width: 104.9375em) {
+  .inner {
+    padding: 0 clamp(60px, 70px, 90px);
+  }
+
+  .left-header,
+  .right-header {
+    width: clamp(70%, 80%, 90%);
+  }
+  .center-header {
+    width: clamp(120%, 140%, 160%);
+  }
+  .navlink {
+    padding: 0 15px;
+  }
+}
+// pc with large screen: width >= 1680px
+@media screen and (min-width: 105em) {
+  .inner {
+    padding: 0px clamp(80px, 90px, 100px);
+  }
+}

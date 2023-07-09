@@ -1,0 +1,1 @@
+export { publicRoutes, privateRoutes , privateRoutesAdminSmallHolder} from './routes'
